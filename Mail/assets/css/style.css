@@ -1,3 +1,83 @@
 body{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Lato', sans-serif;
+    background-image: url(../img/img.jpg);
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.container{
+    padding: 3rem;
+    width: 65%;
+    margin: auto;
+    margin-top: 10rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background-color: rgba(0, 0, 0, 0.697);
+    transition: all 0.5s;
+    border-radius: 50px;
+}
+
+h1{
+    color: white;
+    letter-spacing: 1rem;
+    transition: all 3s;
+    animation: zoom 2s linear infinite;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+button{
+    margin-left: 1.2rem;
+    width: 40px;
+    padding: 0.5rem;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:active{
+    scale: 1.5;
+}
+
+label{
+    margin-right: 1.2rem;
+    color: white;
+    font-size: 1rem;
+
+}
+
+input{
+    border-radius: 25px;
+    height: 1.8rem;
+    padding-left: 1rem;
+}
+
+div{
+    color: white;
+    font-size: 2rem;
+}
+
+.allowed{
+    color: green;
+}
+
+.notallowed{
+    color: red;
 }

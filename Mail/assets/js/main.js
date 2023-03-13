@@ -56,9 +56,12 @@ formEl.addEventListener("submit", function (e) {
     }
   }
   if (checker != true) {
-    divEl.innerHTML = `${userMail.value}: not allowed to proceed`;
+    divEl.innerHTML = `${userMail.value} not allowed to proceed`;
+    divEl.classList.add("notallowed");
   } else {
-    divEl.innerHTML = `${userMail.value}: allowed to proceed`;
+    divEl.innerHTML = `${userMail.value} allowed to proceed`;
+    divEl.classList.remove("notallowed");
+    divEl.classList.add("allowed");
   }
 });
 
