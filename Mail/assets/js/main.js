@@ -33,10 +33,13 @@ const allowedMail = [
 ];
 
 const formEl = document.querySelector("form");
+console.log(formEl)
 
 const userMail = document.querySelector("input");
+console.log(userMail.value)
 
 const divEl = document.createElement("div");
+console.log(divEl)
 
 formEl.insertAdjacentElement("afterend", divEl);
 
@@ -58,3 +61,5 @@ formEl.addEventListener("submit", function (e) {
     divEl.innerHTML = `${userMail.value}: not allowed to proceed`;
   }
 });
+
+console.log(divEl.innerHTML)
