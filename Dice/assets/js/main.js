@@ -21,14 +21,29 @@ console.log("Player roll " + playerDice);
 const cpuDice = Math.floor(Math.random() * 6) + 1;
 console.log("CPU roll " + cpuDice);
 
+let playerDiceEl = document.getElementById("player");
+
+let computerDiceEl = document.getElementById("cpu");
+
+let resultEl = document.getElementById("result");
+
+// update results
+
+playerDiceEl.innerHTML = playerDice;
+computerDiceEl.innerHTML = cpuDice;
+
 // guess the winner
 
 if (playerDice > cpuDice) {
     console.log("Player won!");
+    resultEl.innerHTML = "Player has Won!";
+
   } else if (playerDice < cpuDice) {
-    console.log("Player lost!");
+    console.log("Player has Lost!");
+    resultEl.innerHTML = "Player has Lost!";
+
   } else {
     console.log("Draw!");
+    resultEl.innerHTML = "Draw!";
   }
 
- 
