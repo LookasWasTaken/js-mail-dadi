@@ -37,13 +37,16 @@ computerDiceEl.innerHTML = cpuDice;
 if (playerDice > cpuDice) {
     console.log("Player won!");
     resultEl.innerHTML = "Player has Won!";
+    resultEl.classList.add("winner")
 
   } else if (playerDice < cpuDice) {
     console.log("Player has Lost!");
     resultEl.innerHTML = "Player has Lost!";
+    resultEl.classList.add("loser")
 
   } else {
     console.log("Draw!");
-    resultEl.innerHTML = "Draw!";
+    resultEl.innerHTML = "DRAW!";
+    resultEl.classList.add("draw")
   }
 

@@ -33,13 +33,13 @@ const allowedMail = [
 ];
 
 const formEl = document.querySelector("form");
-console.log(formEl)
+console.log(formEl);
 
 const userMail = document.querySelector("input");
-console.log(userMail.value)
+console.log(userMail.value);
 
 const divEl = document.createElement("div");
-console.log(divEl)
+console.log(divEl);
 
 formEl.insertAdjacentElement("afterend", divEl);
 
@@ -48,18 +48,18 @@ formEl.insertAdjacentElement("afterend", divEl);
 formEl.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  let checker = 0;
+  let checker = false;
 
   for (let i = 0; i < allowedMail.length; i++) {
     if (allowedMail[i] === userMail.value) {
-      divEl.innerHTML = `${userMail.value}: allowed to proceed`;
-      checker = 1;
+      checker = true;
     }
   }
-
-  if (checker === 0) {
+  if (checker != true) {
     divEl.innerHTML = `${userMail.value}: not allowed to proceed`;
+  } else {
+    divEl.innerHTML = `${userMail.value}: allowed to proceed`;
   }
 });
 
-console.log(divEl.innerHTML)
+console.log(divEl.innerHTML);

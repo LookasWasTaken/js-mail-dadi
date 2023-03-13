@@ -5,16 +5,122 @@
     font-family: 'Press Start 2P', cursive;
 }
 
+body {
+    background-image: url(../img/dices.avif);
+    background-size: contain;
+    background-repeat: repeat;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+}
+
 .container {
-    width: 80%;
+    width: 60%;
     margin: auto;
+    margin-top: 10rem;
+    padding: 5rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     gap: 4rem;
+    background-color: rgba(0, 0, 0, 0.673);
+    color: white;
+    border-radius: 25px;
 }
 
-h1{
+h1 {
     margin-top: 5rem;
+    transition: all 5s;
+}
+
+h1:hover{
+    letter-spacing: 2rem;
+}
+
+button {
+    width: 220px;
+    padding: 1rem 0.5rem;
+    border-radius: 25px;
+    transition: all 0.5s;
+}
+
+button:active {
+    scale: 1.5;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+
+.fa-shake {
+    animation-duration: 1.3s !important;
+}
+
+.winner {
+    color: green;
+    animation: victory 2s linear infinite;
+}
+
+@keyframes victory {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.5, 1.5);
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.loser {
+    color: red;
+    animation: lost 2s linear infinite;
+    transition: all 0.5s;
+    scale: 1.2;
+}
+
+@keyframes lost {
+    50% {
+        transform: rotateX(90deg);
+    }
+
+}
+
+.draw {
+    color: grey;
+    animation: draw 2s linear infinite;
+    scale: 1.2;
+    transition: all 0.5s;
+}
+
+@keyframes draw {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(25deg);
+    }
+
+    75% {
+        transform: rotate(-25deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+a {
+    text-decoration: none;
+    color: black;
 }
